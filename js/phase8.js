@@ -256,6 +256,10 @@
         ctx.fillStyle = "red";
         ctx.fillText("ヒットしました", 100, 160);
         snow_sprite.index = 2;
+        //document.getElementById("OmikujiSound").play();  // html5
+        // (1)phase8.html 中に音ファイルに対してＩＤを設定する行を追記する
+        // (2)そのＩＤを指定して、以下のように記述すれば音がでる
+        document.getElementById("hitSound").play();
     }
 
     //当たり判定
@@ -269,5 +273,8 @@
             }
         }
     }
-
+    // 確かに雪ダルマと雪が当たると音がでるようになったが、
+    // ポイントも表示されないし、終了条件もないので、すぐに飽きてしまう。
+    // ゲームとしてはもう少し工夫が必要なので、暇なときに色々ためしてみるつもり。
+    // 20150421 kenzo1999
 })();
